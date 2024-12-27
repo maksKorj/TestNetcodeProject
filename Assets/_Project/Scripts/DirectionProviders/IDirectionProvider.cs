@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace _Project.Scripts.Main.DirectionProviders
+namespace _Project.Scripts.DirectionProviders
 {
     public interface IDirectionProvider
     {

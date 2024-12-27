@@ -1,4 +1,4 @@
-﻿using _Project.Scripts.Main.DirectionProviders;
+﻿using _Project.Scripts.DirectionProviders;
 using Unity.Netcode;
 using UnityEngine;
 

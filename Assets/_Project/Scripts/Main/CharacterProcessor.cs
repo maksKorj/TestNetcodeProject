@@ -14,7 +14,6 @@ namespace _Project.Scripts.Main
         private Rigidbody _rb;
 
         private readonly NetworkVariable<Vector3> _syncedPosition = new();
-        //private readonly NetworkVariable<Quaternion> _syncedRotation = new();
         
         public void SetInput(Vector2 input)
         {
@@ -76,17 +75,11 @@ namespace _Project.Scripts.Main
 
             if (_syncedPosition.Value != _rb.position)
                 _syncedPosition.Value = _rb.position;
-
-            /*if (_syncedRotation.Value != _rb.rotation)
-            _syncedRotation.Value = _rb.rotation;*/
         }
 
         private void InterpolateMovement()
         {
             transform.position = Vector3.Lerp(transform.position, _syncedPosition.Value, Time.deltaTime * 10f);
-        
-            /*transform.SetPositionAndRotation(Vector3.Lerp(transform.position, _syncedPosition.Value, Time.deltaTime * 10f), 
-            Quaternion.Lerp(transform.rotation, _syncedRotation.Value, Time.deltaTime * 10f));*/
         }
     }
 }

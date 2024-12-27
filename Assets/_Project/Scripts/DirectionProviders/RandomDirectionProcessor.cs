@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace _Project.Scripts.Main.DirectionProviders
+namespace _Project.Scripts.DirectionProviders
 {
     [Serializable]
     public class RandomDirectionProcessor : IDirectionProvider
